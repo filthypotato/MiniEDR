@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/filthopotato/Documents/Projects/cpp/MiniEDR/build",
-  "command": "/usr/bin/g++ -I/home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-Core/Source -O3 -DNDEBUG -std=gnu++20 -o MiniEDR-Core/CMakeFiles/MiniEDRCore.dir/Source/Core/Core.cpp.o -c /home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-Core/Source/Core/Core.cpp",
+  "command": "/usr/bin/g++ -I/home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-Core/Source -g -std=gnu++20 -o MiniEDR-Core/CMakeFiles/MiniEDRCore.dir/Source/Core/Core.cpp.o -c /home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-Core/Source/Core/Core.cpp",
   "file": "/home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-Core/Source/Core/Core.cpp",
   "output": "/home/filthopotato/Documents/Projects/cpp/MiniEDR/build/MiniEDR-Core/CMakeFiles/MiniEDRCore.dir/Source/Core/Core.cpp.o"
 },
 {
   "directory": "/home/filthopotato/Documents/Projects/cpp/MiniEDR/build",
-  "command": "/usr/bin/g++ -I/home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-Core/Source -O3 -DNDEBUG -std=gnu++20 -o MiniEDR-App/CMakeFiles/MiniEDRApp.dir/Source/App.cpp.o -c /home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-App/Source/App.cpp",
+  "command": "/usr/bin/g++ -I/home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-Core/Source -g -std=gnu++20 -o MiniEDR-App/CMakeFiles/MiniEDRApp.dir/Source/App.cpp.o -c /home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-App/Source/App.cpp",
   "file": "/home/filthopotato/Documents/Projects/cpp/MiniEDR/MiniEDR-App/Source/App.cpp",
   "output": "/home/filthopotato/Documents/Projects/cpp/MiniEDR/build/MiniEDR-App/CMakeFiles/MiniEDRApp.dir/Source/App.cpp.o"
 }

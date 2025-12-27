@@ -7,7 +7,7 @@
 
 # =============================================================================
 # Project: MiniEDR
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
@@ -22,7 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__MiniEDRCore_Release
+rule CXX_SCAN__MiniEDRCore_Debug
   depfile = $DEP_FILE
   command = /usr/bin/g++ $DEFINES $INCLUDES $FLAGS -E -x c++ $in -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE -fmodules-ts -fdeps-file=$DYNDEP_INTERMEDIATE_FILE -fdeps-target=$OBJ_FILE -fdeps-format=p1689r5 -o $PREPROCESSED_OUTPUT_FILE
   description = Scanning $in for CXX dependencies
@@ -31,7 +31,7 @@ rule CXX_SCAN__MiniEDRCore_Release
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__MiniEDRCore_Release
+rule CXX_DYNDEP__MiniEDRCore_Debug
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=MiniEDR-Core/CMakeFiles/MiniEDRCore.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -42,7 +42,7 @@ rule CXX_DYNDEP__MiniEDRCore_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__MiniEDRCore_scanned_Release
+rule CXX_COMPILER__MiniEDRCore_scanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -fmodules-ts -fmodule-mapper=$DYNDEP_MODULE_MAP_FILE -MD -fdeps-format=p1689r5 -x c++ -o $out -c $in
@@ -52,7 +52,7 @@ rule CXX_COMPILER__MiniEDRCore_scanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__MiniEDRCore_unscanned_Release
+rule CXX_COMPILER__MiniEDRCore_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -62,7 +62,7 @@ rule CXX_COMPILER__MiniEDRCore_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__MiniEDRCore_Release
+rule CXX_STATIC_LIBRARY_LINKER__MiniEDRCore_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -71,7 +71,7 @@ rule CXX_STATIC_LIBRARY_LINKER__MiniEDRCore_Release
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__MiniEDRApp_Release
+rule CXX_SCAN__MiniEDRApp_Debug
   depfile = $DEP_FILE
   command = /usr/bin/g++ $DEFINES $INCLUDES $FLAGS -E -x c++ $in -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE -fmodules-ts -fdeps-file=$DYNDEP_INTERMEDIATE_FILE -fdeps-target=$OBJ_FILE -fdeps-format=p1689r5 -o $PREPROCESSED_OUTPUT_FILE
   description = Scanning $in for CXX dependencies
@@ -80,7 +80,7 @@ rule CXX_SCAN__MiniEDRApp_Release
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__MiniEDRApp_Release
+rule CXX_DYNDEP__MiniEDRApp_Debug
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=MiniEDR-App/CMakeFiles/MiniEDRApp.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -91,7 +91,7 @@ rule CXX_DYNDEP__MiniEDRApp_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__MiniEDRApp_scanned_Release
+rule CXX_COMPILER__MiniEDRApp_scanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -fmodules-ts -fmodule-mapper=$DYNDEP_MODULE_MAP_FILE -MD -fdeps-format=p1689r5 -x c++ -o $out -c $in
@@ -101,7 +101,7 @@ rule CXX_COMPILER__MiniEDRApp_scanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__MiniEDRApp_unscanned_Release
+rule CXX_COMPILER__MiniEDRApp_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -111,7 +111,7 @@ rule CXX_COMPILER__MiniEDRApp_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__MiniEDRApp_Release
+rule CXX_EXECUTABLE_LINKER__MiniEDRApp_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD

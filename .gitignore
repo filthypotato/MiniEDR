@@ -1,14 +1,25 @@
-# Directories
-.vs/
-Binaries/
+# Build output
+/build/
+build/
+bin/
+bin-int/
 
-# Files
-*.vcxproj
-*.vcxproj.user
-*.vcxproj.filters
-*.sln
-*.log
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
 Makefile
+compile_commands.json
 
-# Exclude
-!Vendor/Binaries
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
