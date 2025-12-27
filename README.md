@@ -9,21 +9,6 @@ The project follows a two-tier architecture:
 - **MiniEDR-Core**: Static library containing core functionality and shared code
 - **MiniEDR-App**: Executable application that links against the Core library
 
-```
-MiniEDR/
-├── MiniEDR-Core/          # Core library
-│   ├── Source/
-│   │   └── Core/
-│   └── CMakeLists.txt
-├── MiniEDR-App/           # Application executable
-│   ├── Source/
-│   └── CMakeLists.txt
-├── Scripts/               # Build and run scripts
-│   ├── build.sh
-│   └── run.sh
-└── CMakeLists.txt         # Root CMake configuration
-```
-
 ## Requirements
 
 - **C++ Compiler**: GCC 10+ or Clang 12+ (C++20 support required)
